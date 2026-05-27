@@ -3,7 +3,7 @@
 	"main": "auth-server.ts",
 	"type": "module",
 	"scripts": {
-		"dev": "tsx watch src/auth-server.ts",
+		"dev": "tsx watch --conditions=development src/auth-server.ts",
 		"build": "tsc",
 		"start": "node dist/auth-server.js"
 	},
@@ -19,6 +19,14 @@
 		"#types": {
 			"development": "./src/types/typesIndex.ts",
 			"default": "./dist/types/typesIndex.js"
+		},
+		"#controllers": {
+			"development": "./src/controllers/controllersIndex.ts",
+			"default": "./dist/controllers/controllersIndex.js"
+		},
+		"#routes": {
+			"development": "./src/routes/routesIndex.ts",
+			"default": "./dist/routes/routesIndex.js"
 		}
 	},
 	"dependencies": {
