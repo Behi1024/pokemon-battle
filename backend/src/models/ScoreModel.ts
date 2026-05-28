@@ -8,6 +8,37 @@ const scoreSchema = new mongoose.Schema(
       required: true,
     },
 
+    username: {
+      type: String,
+      required: true,
+    },
+
+    pokemonId: {
+      type: Number,
+      required: true,
+    },
+
+    pokemonName: {
+      type: String,
+      required: true,
+    },
+
+    enemyId: {
+      type: Number,
+      required: true,
+    },
+
+    enemyName: {
+      type: String,
+      required: true,
+    },
+
+    result: {
+      type: String,
+      enum: ["win", "lose"],
+      required: true,
+    },
+
     score: {
       type: Number,
       required: true,
