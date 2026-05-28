@@ -1,5 +1,6 @@
 import { Router } from "express";
 import { getPokemonById, getRandomPokemon } from "../services/pokemon.service";
+import { ScoreModel } from "../models/ScoreModel";
 
 const router = Router();
 
@@ -22,6 +23,17 @@ router.post("/", async (req, res) => {
 
     const result = playerPower >= enemyPower ? "win" : "lose";
     const score = result === "win" ? 100 : 25;
+
+    await ScoreModel.create({
+      userId: "000000000000000000000000",
+      username: "demo-user",
+      pokemonId: playerPokemon.id,
+      pokemonName: playerPokemon.name,
+      enemyId: enemyPokemon.id,
+      enemyName: enemyPokemon.name,
+      result,
+      score,
+    });
 
     res.json({
       success: true,
