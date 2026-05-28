@@ -20,22 +20,18 @@ const UserSchema = new Schema({
 
 const User = model("User", UserSchema, "users");
 
-const UserCheckSchema = z.object({
+const UserRegisterCheckSchema = z.object({
 	username: z.string({ error: "A username is required" }),
 	email: z.string().email({ error: "A correct E-Mail is required" }),
-	passwordHash: z
+	password: z
 		.string({
-			error: "A hashed password is required",
+			error: "A password is required",
 		})
-		.regex(/^\$2[aby]\$\d{2}\$[./A-Za-z0-9]{53}$/, "Invalid bcrypt hash"),
-	createdAt: z
-		.string()
-		.regex(
-			/^(0[1-9]|[12][0-9]|3[01])\.(0[1-9]|1[0-2])\.\d{4}$/,
-			"Date must be in German format (dd.MM.yyyy)",
-		),
+		.min(8, "Password must contain at least 8 characters")
+		.regex(/[A-Za-z]/, "Password must contain letters")
+		.regex(/[0-9]/, "Password must contain numbers"),
 });
 
-type UserType = z.infer<typeof UserCheckSchema>;
+type UserType = z.infer<typeof UserRegisterCheckSchema>;
 
-export { type UserType, User, UserCheckSchema };
+export { type UserType, User, UserRegisterCheckSchema };

@@ -1,1 +1,1 @@
-export { User, UserCheckSchema } from "./userModel.js";
+export { User, UserRegisterCheckSchema } from "./userModel.js";

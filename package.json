@@ -27,6 +27,10 @@
 		"#routes": {
 			"development": "./src/routes/routesIndex.ts",
 			"default": "./dist/routes/routesIndex.js"
+		},
+		"#middleware": {
+			"development": "./src/middleware/middlewareIndex.ts",
+			"default": "./dist/middleware/middlewareIndex.js"
 		}
 	},
 	"dependencies": {
