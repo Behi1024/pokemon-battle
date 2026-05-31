@@ -1,0 +1,14 @@
+# Abhängigkeiten
+node_modules/
+
+# Build-Output (Vite)
+dist/
+
+# TypeScript Build-Cache
+*.tsbuildinfo
+
+# Umgebungsvariablen (JWT-Secret, API-URLs)
+.env
+
+# Vite Dev-Server temporäre Dateien
+vite.config.ts.timestamp*
