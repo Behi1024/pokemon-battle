@@ -112,7 +112,7 @@ export default function PokemonDetailPage() {
         style={{ background: "linear-gradient(180deg, #071d50 0%, #0d2060 100%)" }}
       >
         <p className="text-red-400 font-semibold">{error ?? "Pokémon nicht gefunden."}</p>
-        <Link to="/" className="btn btn-outline" style={{ color: "white", borderColor: "rgba(255,255,255,0.3)" }}>
+        <Link to="/" className="btn-secondary">
           Zurück zur Übersicht
         </Link>
       </main>
@@ -223,18 +223,7 @@ export default function PokemonDetailPage() {
         {/* CTA */}
         <div className="flex gap-3 justify-center flex-wrap">
           {isAuthenticated ? (
-            <Link
-              to="/select"
-              className="btn font-black text-base tracking-widest gap-2"
-              style={{
-                fontFamily: "'Nunito', sans-serif",
-                color: "#1A1F5E",
-                background: "linear-gradient(180deg,#FFE84D 0%,#FFCB05 55%,#E8B200 100%)",
-                border: "2px solid #CC8800",
-                boxShadow: "0 4px 0 #AA7000",
-                borderRadius: 10,
-              }}
-            >
+            <Link to="/select" className="btn-primary">
               IN DEN KAMPF!
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M8 5v14l11-7z" />
@@ -242,32 +231,8 @@ export default function PokemonDetailPage() {
             </Link>
           ) : (
             <>
-              <Link
-                to="/register"
-                className="btn font-black tracking-widest gap-2"
-                style={{
-                  fontFamily: "'Nunito', sans-serif",
-                  color: "#1A1F5E",
-                  background: "linear-gradient(180deg,#FFE84D 0%,#FFCB05 55%,#E8B200 100%)",
-                  border: "2px solid #CC8800",
-                  boxShadow: "0 4px 0 #AA7000",
-                  borderRadius: 10,
-                }}
-              >
-                REGISTRIEREN & KÄMPFEN
-              </Link>
-              <Link
-                to="/login"
-                className="btn btn-outline font-bold tracking-wider"
-                style={{
-                  fontFamily: "'Nunito', sans-serif",
-                  color: "white",
-                  borderColor: "rgba(255,255,255,0.3)",
-                  borderRadius: 10,
-                }}
-              >
-                ANMELDEN
-              </Link>
+              <Link to="/register" className="btn-primary">REGISTRIEREN & KÄMPFEN</Link>
+              <Link to="/login" className="btn-secondary">ANMELDEN</Link>
             </>
           )}
         </div>

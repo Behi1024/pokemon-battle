@@ -62,27 +62,13 @@ export default function UnauthorizedPage() {
         <Link
           to="/login"
           state={{ from: location }}
-          className="btn font-black tracking-widest"
-          style={{
-            fontFamily: "'Nunito', sans-serif",
-            color: "#1A1F5E",
-            background: "linear-gradient(180deg,#FFE84D 0%,#FFCB05 55%,#E8B200 100%)",
-            border: "2px solid #CC8800",
-            boxShadow: "0 4px 0 #AA7000",
-            borderRadius: 10,
-          }}
+          className="btn-primary"
         >
           ANMELDEN
         </Link>
         <Link
           to="/register"
-          className="btn btn-outline font-bold tracking-wider"
-          style={{
-            fontFamily: "'Nunito', sans-serif",
-            color: "white",
-            borderColor: "rgba(255,255,255,0.3)",
-            borderRadius: 10,
-          }}
+          className="btn-secondary"
         >
           REGISTRIEREN
         </Link>

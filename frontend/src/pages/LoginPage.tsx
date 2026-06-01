@@ -253,15 +253,7 @@ export default function LoginPage() {
               <button
                 type="submit"
                 disabled={isLoading}
-                className="btn w-full font-black text-base tracking-widest gap-2 mt-2 disabled:opacity-60"
-                style={{
-                  fontFamily: "'Nunito', sans-serif",
-                  color: "#1A1F5E",
-                  background: "linear-gradient(180deg,#FFE84D 0%,#FFCB05 55%,#E8B200 100%)",
-                  border: "2px solid #CC8800",
-                  boxShadow: isLoading ? "none" : "0 4px 0 #AA7000",
-                  borderRadius: 10,
-                }}
+                className="btn-primary w-full mt-2"
               >
                 {isLoading ? "Logging in…" : "LOGIN"}
                 {!isLoading && (

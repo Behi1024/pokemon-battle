@@ -11,3 +11,187 @@
   0%, 100% { opacity: 1; }
   50%       { opacity: 0.75; }
 }
+
+/* ── Primary & secondary buttons ────────────────────────────────── */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0.6rem 1.25rem;
+  border-radius: 10px;
+  border: 2px solid #CC8800;
+  background: linear-gradient(180deg, #FFE84D 0%, #FFCB05 55%, #E8B200 100%);
+  color: #1A1F5E;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 900;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0 4px 0 #AA7000;
+  cursor: pointer;
+  transition: background 150ms ease, color 150ms ease, border-color 150ms ease, box-shadow 150ms ease, transform 100ms ease;
+  outline: none;
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  background: #1A1F5E;
+  color: #FFCB05;
+  border-color: #FFCB05;
+  box-shadow: 0 4px 0 #0f1235;
+}
+
+.btn-primary:focus-visible {
+  box-shadow: 0 0 0 2px #071d50, 0 0 0 4px #FFCB05;
+}
+
+.btn-primary:active:not(:disabled) {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #AA7000;
+}
+
+.btn-primary:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0.6rem 1.25rem;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  color: white;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 150ms ease, color 150ms ease, border-color 150ms ease;
+  outline: none;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+  background: white;
+  color: #1A1F5E;
+  border-color: white;
+}
+
+.btn-secondary:focus-visible {
+  box-shadow: 0 0 0 2px #071d50, 0 0 0 4px #FFCB05;
+}
+
+/* ── Header nav buttons ─────────────────────────────────────────── */
+
+.btn-nav {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 12px;
+  border-radius: 6px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  color: white;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 150ms ease, color 150ms ease, border-color 150ms ease;
+  outline: none;
+}
+
+.btn-nav:hover,
+.btn-nav:focus-visible {
+  background: white;
+  color: #1A1F5E;
+  border-color: white;
+}
+
+.btn-nav:focus-visible {
+  box-shadow: 0 0 0 2px #1A1F5E, 0 0 0 4px #FFCB05;
+}
+
+.btn-nav-active {
+  background: #FFCB05;
+  color: #1A1F5E;
+  border-color: #FFCB05;
+}
+
+.btn-nav-active:hover,
+.btn-nav-active:focus-visible {
+  background: #FFE84D;
+  border-color: #FFE84D;
+}
+
+.btn-login {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  border-radius: 6px;
+  border: 2px solid #c8d0e8;
+  background: white;
+  color: #1A1F5E;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0 2px 0 #b0bbda;
+  transition: background 150ms ease, color 150ms ease, border-color 150ms ease, box-shadow 150ms ease;
+  outline: none;
+}
+
+.btn-login:hover,
+.btn-login:focus-visible {
+  background: #1A1F5E;
+  color: white;
+  border-color: #1A1F5E;
+  box-shadow: 0 2px 0 #0f1235;
+}
+
+.btn-login:focus-visible {
+  box-shadow: 0 0 0 2px #1A1F5E, 0 0 0 4px #FFCB05;
+}
+
+.btn-logout {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 12px;
+  border-radius: 6px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 150ms ease, color 150ms ease, border-color 150ms ease;
+  outline: none;
+}
+
+.btn-logout:hover,
+.btn-logout:focus-visible {
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.btn-logout:focus-visible {
+  box-shadow: 0 0 0 2px #1A1F5E, 0 0 0 4px #FFCB05;
+}

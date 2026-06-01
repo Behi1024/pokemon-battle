@@ -137,8 +137,7 @@ export default function LeaderboardPage() {
         <div className="flex justify-center gap-3 pt-2">
           <button
             onClick={() => navigate("/select")}
-            className="btn font-black gap-2"
-            style={{ fontFamily: "'Nunito', sans-serif", color: "#1A1F5E", background: "linear-gradient(180deg,#FFE84D 0%,#FFCB05 55%,#E8B200 100%)", border: "2px solid #CC8800", boxShadow: "0 4px 0 #AA7000", borderRadius: 10 }}
+            className="btn-primary"
           >
             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
             Nochmal kämpfen

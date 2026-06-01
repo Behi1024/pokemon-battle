@@ -177,8 +177,7 @@ export default function SelectPage() {
             {!loading && !search.trim() && hasMore && (
               <div className="flex justify-center mt-6">
                 <button onClick={loadMore} disabled={loadingMore}
-                  className="btn btn-outline gap-2"
-                  style={{ color: "white", borderColor: "rgba(255,255,255,0.3)" }}>
+                  className="btn-secondary">
                   {loadingMore
                     ? <span className="loading loading-spinner loading-sm" />
                     : "Mehr laden"}
@@ -220,15 +219,7 @@ export default function SelectPage() {
           <button
             onClick={() => selected && navigate("/battle", { state: { pokemon: selected } })}
             disabled={!selected}
-            className="btn font-black text-base tracking-widest gap-2 shrink-0 disabled:opacity-40"
-            style={{
-              fontFamily: "'Nunito', sans-serif",
-              color: "#1A1F5E",
-              background: "linear-gradient(180deg,#FFE84D 0%,#FFCB05 55%,#E8B200 100%)",
-              border: "2px solid #CC8800",
-              boxShadow: selected ? "0 4px 0 #AA7000" : "none",
-              borderRadius: 10,
-            }}
+            className="btn-primary shrink-0"
           >
             IN DEN KAMPF!
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">

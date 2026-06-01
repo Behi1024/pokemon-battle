@@ -57,15 +57,7 @@ export default function NotFoundPage() {
       <div className="flex gap-3 mt-8 flex-wrap justify-center">
         <Link
           to="/"
-          className="btn font-black tracking-widest"
-          style={{
-            fontFamily: "'Nunito', sans-serif",
-            color: "#1A1F5E",
-            background: "linear-gradient(180deg,#FFE84D 0%,#FFCB05 55%,#E8B200 100%)",
-            border: "2px solid #CC8800",
-            boxShadow: "0 4px 0 #AA7000",
-            borderRadius: 10,
-          }}
+          className="btn-primary"
         >
           ZUR STARTSEITE
         </Link>

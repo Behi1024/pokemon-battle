@@ -180,8 +180,7 @@ export default function BattlePage() {
         {!fighting && (
           <button
             onClick={startBattle}
-            className="btn font-black text-lg tracking-widest gap-3"
-            style={{ fontFamily: "'Nunito', sans-serif", color: "#1A1F5E", background: "linear-gradient(180deg,#FFE84D 0%,#FFCB05 55%,#E8B200 100%)", border: "2px solid #CC8800", boxShadow: "0 5px 0 #AA7000", borderRadius: 12, padding: "14px 36px" }}
+            className="btn-primary text-lg px-9 py-3.5"
           >
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
             KÄMPFEN!
@@ -238,19 +237,11 @@ export default function BattlePage() {
 
       {/* Action buttons */}
       <div className="flex gap-3 flex-wrap justify-center">
-        <button
-          onClick={() => navigate("/select")}
-          className="btn btn-outline gap-2"
-          style={{ color: "white", borderColor: "rgba(255,255,255,0.35)", fontFamily: "'Nunito', sans-serif", fontWeight: 800 }}
-        >
+        <button onClick={() => navigate("/select")} className="btn-secondary">
           <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.65 6.35a8 8 0 1 0 .71 10.24l-1.41-1.41A6 6 0 1 1 18 12h-3l4 4 4-4h-3a8 8 0 0 0-.35-5.65z"/></svg>
           Nochmal
         </button>
-        <button
-          onClick={() => navigate("/leaderboard")}
-          className="btn font-black gap-2"
-          style={{ fontFamily: "'Nunito', sans-serif", color: "#1A1F5E", background: "linear-gradient(180deg,#FFE84D 0%,#FFCB05 55%,#E8B200 100%)", border: "2px solid #CC8800", boxShadow: "0 4px 0 #AA7000", borderRadius: 10 }}
-        >
+        <button onClick={() => navigate("/leaderboard")} className="btn-primary">
           <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M11.5 2C6.81 2 3 5.81 3 10.5S6.81 19 11.5 19h.5v3c4.86-2.34 8-7 8-11.5C20 5.81 16.19 2 11.5 2zm1 14.5h-2v-2h2v2zm0-4h-2c0-3.25 3-3 3-5 0-1.1-.9-2-2-2s-2 .9-2 2h-2c0-2.21 1.79-4 4-4s4 1.79 4 4c0 2.5-3 2.75-3 5z"/></svg>
           Bestenliste
         </button>

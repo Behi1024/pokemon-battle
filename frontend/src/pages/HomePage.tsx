@@ -154,48 +154,11 @@ export default function HomePage() {
 
         <div className="mt-5 flex gap-3 justify-center flex-wrap">
           {isAuthenticated ? (
-            <Link
-              to="/select"
-              className="btn font-black tracking-widest"
-              style={{
-                fontFamily: "'Nunito', sans-serif",
-                color: "#1A1F5E",
-                background: "linear-gradient(180deg,#FFE84D 0%,#FFCB05 55%,#E8B200 100%)",
-                border: "2px solid #CC8800",
-                boxShadow: "0 4px 0 #AA7000",
-                borderRadius: 10,
-              }}
-            >
-              IN DEN KAMPF!
-            </Link>
+            <Link to="/select" className="btn-primary">IN DEN KAMPF!</Link>
           ) : (
             <>
-              <Link
-                to="/register"
-                className="btn font-black tracking-widest"
-                style={{
-                  fontFamily: "'Nunito', sans-serif",
-                  color: "#1A1F5E",
-                  background: "linear-gradient(180deg,#FFE84D 0%,#FFCB05 55%,#E8B200 100%)",
-                  border: "2px solid #CC8800",
-                  boxShadow: "0 4px 0 #AA7000",
-                  borderRadius: 10,
-                }}
-              >
-                JETZT REGISTRIEREN
-              </Link>
-              <Link
-                to="/login"
-                className="btn btn-outline font-bold tracking-wider"
-                style={{
-                  fontFamily: "'Nunito', sans-serif",
-                  color: "white",
-                  borderColor: "rgba(255,255,255,0.3)",
-                  borderRadius: 10,
-                }}
-              >
-                ANMELDEN
-              </Link>
+              <Link to="/register" className="btn-primary">JETZT REGISTRIEREN</Link>
+              <Link to="/login" className="btn-secondary">ANMELDEN</Link>
             </>
           )}
         </div>
@@ -253,8 +216,7 @@ export default function HomePage() {
                 <button
                   onClick={loadMore}
                   disabled={loadingMore}
-                  className="btn btn-outline gap-2"
-                  style={{ color: "white", borderColor: "rgba(255,255,255,0.3)" }}
+                  className="btn-secondary"
                 >
                   {loadingMore ? (
                     <span className="loading loading-spinner loading-sm" />
