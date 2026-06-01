@@ -45,6 +45,31 @@ export async function searchPokemon(name: string): Promise<PokemonSummary> {
   return fetchDetail(name.toLowerCase().trim());
 }
 
+export interface PokemonFull extends PokemonSummary {
+  stats: { name: string; value: number }[];
+  height: number; // in decimetres
+  weight: number; // in hectograms
+}
+
+export async function fetchPokemonFull(idOrName: number | string): Promise<PokemonFull> {
+  const res = await fetch(`${BASE}/pokemon/${idOrName}`);
+  if (!res.ok) throw new Error(`Pokémon '${idOrName}' nicht gefunden`);
+  const d = await res.json();
+  return {
+    id: d.id,
+    name: d.name,
+    types: (d.types as { type: { name: string } }[]).map((t) => t.type.name),
+    sprite: d.sprites?.other?.["official-artwork"]?.front_default ?? spriteUrl(d.id),
+    baseExperience: d.base_experience ?? 0,
+    stats: (d.stats as { base_stat: number; stat: { name: string } }[]).map((s) => ({
+      name: s.stat.name,
+      value: s.base_stat,
+    })),
+    height: d.height ?? 0,
+    weight: d.weight ?? 0,
+  };
+}
+
 export const TYPE_COLORS: Record<string, string> = {
   normal: "#9099A1",   fire: "#F9622E",    water: "#4D90D5",
   electric: "#F4D23C", grass: "#63BB5B",   ice: "#74CEC0",
